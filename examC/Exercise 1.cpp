@@ -1,8 +1,6 @@
 #include<stdio.h>
 
-void checkInt(int &num, char text0[], char text1[], char text2[], char text3[])
-{
-//counts the number of elements at intput.
+void checkInt(int &num, char text0[], char text1[], char text2[], char text3[]){
 	int rc;
 	char term;
 	do{
