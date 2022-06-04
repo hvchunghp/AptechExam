@@ -1,16 +1,29 @@
 #include<stdio.h>
- 
-int main() {
-    int n, tmp;
-    do{
-    	printf("Enter 3-digit integer: ");
-    	scanf("%d", &n);
-    	if(n < 99){
-    		printf("You have not entered all 3-digit integers, please re-enter!\n");
-		}else if(n > 999){
-			printf("You have entered more than 3-digit integers, please re-enter!\n");
+
+void checkInt(int &num, char text0[], char text1[], char text2[], char text3[])
+{
+//counts the number of elements at intput.
+	int rc;
+	char term;
+	do{
+		fflush(stdin);
+		printf("%s", text0);
+		rc = scanf("%d%c", &num, &term);
+		if(rc<2 || term!='\n')
+			printf("%s\n", text1);
+		else if(num <= 99){
+			printf("%s\n", text2);
+		}else if(num > 999){
+			printf("%s\n", text3);
 		}
-	}while(n < 99 || n > 999);
+	}while(rc!=2);
+}
+
+int main() {
+    int n;
+	int tmp;
+	checkInt (n, "Enter 3-digit integer: ", "Do not enter string here. Try again\n", "You have not entered all 3-digit integers, please re-enter!\n",
+	"You have entered more than 3-digit integers, please re-enter!\n");
     printf("The number %d reads as: ", n);
     while(n != 0) {
         tmp = (tmp * 10) + (n % 10);
