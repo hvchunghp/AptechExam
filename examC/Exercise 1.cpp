@@ -1,6 +1,8 @@
 #include<stdio.h>
 
-void checkInt(int &num, char text0[], char text1[], char text2[], char text3[]){
+void checkInt(int &num, char text0[], char text1[], char text2[], char text3[])
+{
+//counts the number of elements at intput.
 	int rc;
 	char term;
 	do{
@@ -14,7 +16,7 @@ void checkInt(int &num, char text0[], char text1[], char text2[], char text3[]){
 		}else if(num > 999){
 			printf("%s\n", text3);
 		}
-	}while(rc!=2);
+	}while(rc!=2 || num <= 99 || num > 999);
 }
 
 int main() {
@@ -59,7 +61,7 @@ int main() {
             case 9: 
                 printf("Nine ");
                 break;
-        }     
+        } 
         tmp = tmp / 10;
     }
     return 0;
