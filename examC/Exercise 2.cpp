@@ -1,14 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() {
-	char str[25] ;
-	
-	printf("Enter string: ");
-	gets(str);
-	int lengthStr = strlen(str);
+void sort(char str[], int lengthStr){
 	char tmp;
-	printf("String %s ", str);
 	for (int i = 0; i < lengthStr - 1; i++) {
 		for (int j = i+1; j < lengthStr; j++) {
 			if (str[i] > str[j]) {
@@ -18,6 +12,15 @@ int main() {
 			}
 		}
 	}
+}
+
+int main() {
+	char str[25];
+	printf("Enter string: ");
+	gets(str);
+	int lengthStr = strlen(str);
+	printf("String %s ", str);
+	sort(str, lengthStr);
 	printf("after sorting alphabetically will have the result: %s", str);
 	return 0;
 }
