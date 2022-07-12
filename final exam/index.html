@@ -45,29 +45,33 @@
         <div class="main-content">
             <div class="input-form row">
                 <label for="name">Name on Card</label>
-                <input type="text" id="name" class="m-3" placeholder="Hoang Viet Chung">
+                <input type="text" id="name" class="m-3" placeholder="Hoang Viet Chung" required>
             </div>
             <div class="input-form carNumber row">
                 <div class="col-6">
                     <label for="cardNum">Card Number</label>
-                    <input type="text" id="cardNum" class="m-2" placeholder="************">
+                    <input type="text" id="cardNum" class="m-2" placeholder="************" required>
                 </div>
                 <div class="col-6">
                     <label for="CVV">CVV</label>
-                    <input type="text" id="CVV" class="m-2" placeholder="***">
+                    <input type="text" id="CVV" class="m-2" placeholder="***" required>
                 </div>
             </div>
             <div class="input-form row">
                 <label for="expiration">Expiration Date</label>
-                <input type="text" id="expiration" class="m-3" placeholder="MM / YY">
+                <input type="text" id="expiration" class="m-3" placeholder="MM / YY" required>
             </div>
             <div class="input-form row m-2">
-                <div role="button" class="btn btn-danger bg-danger text-light col-6">Make A Payment</div>
+                <button type="button" class="btn btn-danger bg-danger text-light col-6" onclick="submit()">Make A Payment</button>
+            </div>
+            <div class="input-form row">
+                <p id="checkNumberCard"></p>
             </div>
         </div>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js "></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js "></script>
+<script src="/main.js"></script>
 
 </html>
